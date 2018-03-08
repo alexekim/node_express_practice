@@ -28,6 +28,10 @@ app.get('/', function(req,res){
   res.render('index');
 })
 
+app.get('/japanese', function(req,res){
+  res.json(japanese);
+})
+
 app.get('/hello', function(req,res){
   res.json(japanese.hello);
 })
