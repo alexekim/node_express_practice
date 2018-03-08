@@ -18,6 +18,10 @@ var japanese = {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+app.get('/', function(req,res){
+  res.render('index');
+})
+
 app.get('/hello', function(req,res){
   res.json(japanese.hello);
 })
