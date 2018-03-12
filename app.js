@@ -12,7 +12,9 @@ var japanese = {
   no: "iie",
   yes: "hai.",
   cheers: "kanpai!",
-  whatsUp: "choushi wa dou"
+  whatsUp: "choushi wa dou",
+  japanese: "nihongo",
+  welcomeMessage: "welcome. go to this domain + /japanese to view the JSON object of a few words and how to say them in Japanese!"
 };
 
 app.set('views', path.join(__dirname, 'views'));
@@ -27,7 +29,8 @@ app.all('/japanese', function(req, res, next) {
 });
 
 app.get('/', function(req,res){
-  res.render('index');
+  var arrayOfKeys = Object.keys(japanese);
+  res.render('index', {japanese: japanese.welcomeMessage, array: arrayOfKeys});
 })
 
 app.get('/japanese', function(req,res){
