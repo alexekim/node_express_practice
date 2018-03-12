@@ -28,38 +28,38 @@ app.all('/japanese', function(req, res, next) {
   next()
 });
 
-app.get('/', function(req,res){
+app.get('/japanese', function(req,res){
   var arrayOfKeys = Object.keys(japanese);
   res.render('index', {japanese: japanese.welcomeMessage, array: arrayOfKeys});
 })
 
-app.get('/japanese', function(req,res){
-  res.json(japanese);
-})
+// app.get('/japanese', function(req,res){
+//   res.json(japanese);
+// })
 
-app.get('/hello', function(req,res){
+app.get('/japanese/hello', function(req,res){
   res.json(japanese.hello);
 })
 
-app.get('/goodbye', function(req,res){
+app.get('/japanese/goodbye', function(req,res){
   res.json(japanese.goodbye);
 })
-app.get('/thankyou', function(req,res){
+app.get('/japanese/thankyou', function(req,res){
   res.json(japanese.thankYou);
 })
-app.get('/seeyou', function(req,res){
+app.get('/japanese/seeyou', function(req,res){
   res.json(japanese.seeYou);
 })
-app.get('/no', function(req,res){
+app.get('/japanese/no', function(req,res){
   res.json(japanese.no);
 })
-app.get('/yes', function(req,res){
+app.get('/japanese/yes', function(req,res){
   res.json(japanese.yes);
 })
-app.get('/cheers', function(req,res){
+app.get('/japanese/cheers', function(req,res){
   res.json(japanese.cheers);
 })
-app.get('/whatsup', function(req,res){
+app.get('/japanese/whatsup', function(req,res){
   res.json(japanse.whatsUp);
 })
 
