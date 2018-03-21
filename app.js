@@ -33,9 +33,9 @@ app.get('/japanese', function(req,res){
   res.render('index', {japanese: japanese.welcomeMessage, array: arrayOfKeys});
 })
 
-// app.get('/japanese', function(req,res){
-//   res.json(japanese);
-// })
+app.get('/japanese/json', function(req,res){
+  res.json(japanese);
+})
 
 app.get('/japanese/hello', function(req,res){
   res.json(japanese.hello);
